@@ -1,7 +1,6 @@
 package hello.typeconverter.converter;
 
 import hello.typeconverter.type.IpPort;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.core.convert.support.DefaultConversionService;
 
@@ -14,7 +13,7 @@ public class ConversionServiceTest {
         DefaultConversionService conversionService = new DefaultConversionService();
         conversionService.addConverter(new StringToIntegerConverter());
         conversionService.addConverter(new IntegerToStringConverter());
-        conversionService.addConverter(new StringIpPortConverter());
+        conversionService.addConverter(new StringToIpPortConverter());
         conversionService.addConverter(new IpPortToStringConverter());
 
         // 사용
